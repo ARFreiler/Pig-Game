@@ -10,25 +10,26 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: linear-gradient(to top left, rgb(104, 87, 199) 0%, rgb(13, 7, 104) 100%);
 }
 
 .container {
-    min-height: 60vh;
-    min-width: 60vw;
+    min-height: 70vh;
+    min-width: 80vw;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
 }
 
 .player-1 {
-    background-color: navy;
+    background-color: rgb(10, 95, 129);
     width: 50%;
     border-radius: 9px 0 0 9px;
     text-align: center;
 }
 
 .player-2 {
-    background-color: aqua;
+    background-color: rgb(43, 205, 226);
     width: 50%;
     border-radius: 0 9px 9px 0;
     text-align: center;
@@ -40,20 +41,84 @@ body {
 }
 
 .scoreEl {
+    margin-top: 15px;
     font-size: 70px;
+    color: rgb(19, 12, 128);
 }
 
 .current {
-    background-color: blueviolet;
+    background-color: rgb(19, 12, 128);
+    color: aliceblue;
     width: 35%;
     min-height: 20%;
     border-radius: 9px;
     text-align: center;
     margin: auto;
-    font-size: 30px;
+    font-size: 40px;
     margin-top: 30%;
 }
 
 .current-title {
     padding-top: 20px;
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #444;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 0.2rem 1.8rem;
+    border-radius: 50rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn::first-letter {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+
+.btn--new {
+    top: 12rem;
+}
+
+.btn--roll {
+    top: 39.3rem;
+}
+
+.btn--hold {
+    top: 46.1rem;
+}
+
+.btn:active {
+    transform: translate(-50%, 3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 20.5rem;
+    transform: translateX(-50%);
+    height: 10rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
 }
