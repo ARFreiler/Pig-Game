@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="stylesheet.css" />
-    <title>Document</title>
+    <title>Pig Game</title>
   </head>
   <body>
     <section class="container">
-      <section class="player-1">
+      <section class="player-0">
         <h1 class="player-name">Player One</h1>
-        <div class="scoreEl score0El">0</div>
+        <div class="scoreEl" id="score0El">0</div>
         <div class="current">
           <p class="current-title">Current</p>
           <div class="current-0El">0</div>
         </div>
       </section>
-      <section class="player-2">
+      <section class="player-1">
         <h1 class="player-name">Player Two</h1>
-        <div class="scoreEl score1El">0</div>
+        <div class="scoreEl" id="score1El">0</div>
         <div class="current">
           <p class="current-title">Current</p>
           <div class="current-1El">0</div>
         </div>
       </section>
 
-      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <img src="dice-5.png" alt="Playing dice" class="dice hidden" />
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
     </section>
-    <script src="script.js"></script>
   </body>
+  <script src="script.js" defer="defer"></script>
 </html>

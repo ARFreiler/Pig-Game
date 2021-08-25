@@ -21,14 +21,14 @@ body {
     flex-direction: row;
 }
 
-.player-1 {
+.player-0 {
     background-color: rgb(10, 95, 129);
     width: 50%;
     border-radius: 9px 0 0 9px;
     text-align: center;
 }
 
-.player-2 {
+.player-1 {
     background-color: rgb(43, 205, 226);
     width: 50%;
     border-radius: 0 9px 9px 0;
