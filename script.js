@@ -13,11 +13,23 @@ const rollBtn = document.querySelector('.btn--roll');
 const holdBtn = document.querySelector('.btn--hold');
 
 // Starting Values
-// const score0El = 0;
-// const score1El = 0;
-// const current0El = 0;
-// const current1El = 0;
+// let scores = [0, 0];
+let currentScore = 0;
+let activePlayer = 0;
 
+score0El.textContent = 0;
+score1El.textContent = 0;
+current0El.textContent = 0;
+current1El.textContent = 0;
+
+// Switching Players
+const switchPlayer = function () {
+    document.getElementById(`current-${activePlayer}`).textContent = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    currentScore = 0;
+    player0El.classList.toggle('player-active');
+    player1El.classList.toggle('player-active');
+};
 
 // Rolling the dice functionality
 rollBtn.addEventListener('click', function () {
@@ -30,6 +42,13 @@ rollBtn.addEventListener('click', function () {
     diceEl.src = `dice-${dice}.png`;
 
     // Check for rolled one; if true switch players
+    if (dice !== 1) {
+        currentScore += dice;
+        document.getElementById(`current-${activePlayer}`).textContent = currentScore;
+    } else {
+        // Switch to the next player    
+        switchPlayer();
+    }
 
-    // Switch to the next player
+
 })
